@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<link href="style.css" type="text/css" rel="stylesheet" />
+<title>To-Do List</title>
+</head>
+<body>
+	<section id="container">
+		<div ng-controller="TasksController">
+		    <h1>My To-Do List:</h1>
+		    <ol id="myOl"><li ng-repeat="task in tasks">{{task}}</li></ol>
+		    <h3>Add More Tasks:</h3>
+		        <input type="text" ng-model="newTask">
+		        <button ng-click="addTask()">Add</button>
+		</div>
+	</section>
+<script src="script.js"></script>
+</body>
+</html>
